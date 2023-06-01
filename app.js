@@ -22,7 +22,7 @@ app.get("/status", (req, res) => {
   });
 });
 
-//启动web（xray-core）
+//启动web
 app.get("/start", (req, res) => {
   let cmdStr = "chmod +x ./web && ./web -c ./config.yaml >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
